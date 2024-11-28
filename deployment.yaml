@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs
+  name: cafestatic
   labels:
-    app: nodejs
+    app: cafestatic
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs
+      app: cafestatic
   template:
     metadata:
       labels:
-        app: nodejs
+        app: cafestatic
     spec:
       containers:
       - name: cafestatic
-        image: neehar2601/nodejsweb:latest
+        image: lavanya986/static-website
         ports:
         - containerPort: 80
